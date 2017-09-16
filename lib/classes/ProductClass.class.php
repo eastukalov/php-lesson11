@@ -1,7 +1,9 @@
 <?php
+namespace lib\classes;
+use TypeGetAble, PriceAble;
 
-    abstract class ProductClass implements TypeGetAble, PriceAble
-    {
+abstract class ProductClass implements TypeGetAble, PriceAble
+{
     private $price;
     private $discount = 0;
     private $brand;
@@ -56,6 +58,6 @@
     public function getId()
     {
         return $this->id;
-    }
+}
 
 }

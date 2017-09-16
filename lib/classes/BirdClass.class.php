@@ -1,4 +1,5 @@
 <?php
+namespace lib\classes;
 
 abstract class BirdClass extends ProductClass
 {

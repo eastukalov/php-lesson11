@@ -1,4 +1,6 @@
 <?php
+namespace lib\classes;
+use OnOffAble;
 
 abstract class HomeAppliancesClass extends ProductClass implements OnOffAble
 {

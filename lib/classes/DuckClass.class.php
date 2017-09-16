@@ -1,4 +1,6 @@
 <?php
+namespace lib\classes;
+use WildGetAble;
 
 class DuckClass extends BirdClass implements WildGetAble
 {

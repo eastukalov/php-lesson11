@@ -1,12 +1,15 @@
 <?php
 
+namespace lib\classes;
+use ColorSetAble;
+
 class BallpointPenClass extends WritingInstruments implements ColorSetAble
 {
     private $color;
 
     public function __construct($brand, $model, $price, $discount, $id, $color)
     {
-        ProductClass::__construct ($brand, $model, $price, $discount, $id, 'BallpointPen');
+        ProductClass::__construct ($brand, $model, $price, $discount, 'BallpointPen', $id );
         $this->color = $color;
     }
 
