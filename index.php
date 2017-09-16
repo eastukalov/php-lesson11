@@ -6,7 +6,6 @@ use lib\classes\TVClass;
 use lib\classes\BallpointPenClass;
 use lib\classes\DuckClass;
 use lib\classes\OrderClass;
-use lib\classes\MyException;
 
 
 $carBMV = new CarClass('BMW', 'Z4',1000, 0, -777, 'white');
