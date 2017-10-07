@@ -1,7 +1,7 @@
 <?php
 namespace lib\classes;
 
-class BusketClass
+class Busket
 {
     private $totalPrice = 0;
     private $totalCount = 0;
@@ -21,10 +21,10 @@ class BusketClass
             }
 
             if (isset($this->products[$product->getId()])) {
-                $this->products[$product->getId()][5] += 1;
+                $this->products[$product->getId()]->incCount();
             }
             else {
-                $this->products[$product->getId()] = [$product->getPrice(), $product->getBrand(), $product->getModel(), $product->getType(), $product->getId(), 1];
+                $this->products[$product->getId()] = $product;
             }
             $this->totalPrice += $product->getPrice();
             $this->totalCount += 1;
@@ -36,8 +36,9 @@ class BusketClass
 
     public function unsetProducts($id) {
         if (isset($this->products[$id])) {
-            $this->totalPrice -= $this->products[$id][0];
-            $this->totalCount -= 1;
+            $this->totalPrice -= $this->products[$id]->getPrice();
+            $this->totalCount -= $this->products[$id]->getCount();
+            $this->products[$id]->setCount(0);
             unset($this->products[$id]);
         }
     }

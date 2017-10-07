@@ -1,14 +1,14 @@
 <?php
 namespace lib\classes;
 
-abstract class BirdClass extends ProductClass
+abstract class Bird extends Product
 {
     private $gender;
     private $state = 'спит';
 
     public function __construct($brand, $model, $price, $discount, $type, $id, $gender)
     {
-        ProductClass::__construct ($brand, $model, $price, $discount, $type, $id);
+        Product::__construct ($brand, $model, $price, $discount, $type, $id);
         $this->gender = $gender;
     }
 

@@ -1,8 +1,8 @@
 <?php
 namespace lib\classes;
-use MoveAble;
+use lib\classes\package\MoveAble;
 
-abstract class TransportClass extends ProductClass  implements MoveAble
+abstract class Transport extends Product  implements MoveAble
 {
     private $move = false;
     private $color;

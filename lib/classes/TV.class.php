@@ -1,14 +1,14 @@
 <?php
 namespace lib\classes;
 
-class TVClass extends HomeAppliancesClass
+class TV extends HomeAppliances
 {
     private $channel;
 
 
     public function __construct($brand, $model, $price, $discount, $id)
     {
-        ProductClass::__construct ($brand, $model, $price, $discount, 'TV', $id);
+        Product::__construct ($brand, $model, $price, $discount, 'TV', $id);
     }
 
     public function changeChannel ($channel) {

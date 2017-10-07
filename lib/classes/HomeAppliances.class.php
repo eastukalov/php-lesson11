@@ -1,8 +1,8 @@
 <?php
 namespace lib\classes;
-use OnOffAble;
+use lib\classes\package\OnOffAble;
 
-abstract class HomeAppliancesClass extends ProductClass implements OnOffAble
+abstract class HomeAppliances extends Product implements OnOffAble
 {
     private $onOff = false;
 

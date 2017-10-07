@@ -2,7 +2,7 @@
 namespace lib\classes;
 
 
-class OrderClass extends BusketClass
+class Order extends Busket
 {
     public function printBusket ()
     {
@@ -27,12 +27,12 @@ class OrderClass extends BusketClass
         <tbody>
         <?php foreach ($this->getProducts() as $product) : ?>
             <tr>
-                <td><?=$product[4]?></td>
-                <td><?=$product[3]?></td>
-                <td><?=$product[1]?></td>
-                <td><?=$product[2]?></td>
-                <td><?=$product[0]?></td>
-                <td><?=$product[5]?></td>
+                <td><?=$product->getId()?></td>
+                <td><?=$product->getType()?></td>
+                <td><?=$product->getBrand()?></td>
+                <td><?=$product->getModel()?></td>
+                <td><?=$product->getPrice()?></td>
+                <td><?=$product->getCount()?></td>
             </tr>
         <?php endforeach; ?>
         </tbody>

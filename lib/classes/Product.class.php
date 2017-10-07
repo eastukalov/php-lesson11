@@ -1,15 +1,16 @@
 <?php
 namespace lib\classes;
-use TypeGetAble, PriceAble;
+use lib\classes\package\TypeGetAble, lib\classes\package\PriceAble, lib\classes\package\CountAble, lib\classes\package\CountChangeAble;
 
-abstract class ProductClass implements TypeGetAble, PriceAble
+abstract class Product implements TypeGetAble, PriceAble, CountAble, CountChangeAble
 {
     private $price;
     private $discount = 0;
     private $brand;
     private $model;
     private $type;
-    private $id=0;
+    private $id = 0;
+    private $count = 0;
 
     public function __construct ($brand, $model, $price, $discount=0, $type, $id)
     {
@@ -19,6 +20,7 @@ abstract class ProductClass implements TypeGetAble, PriceAble
         $this->discount = $discount;
         $this->type = $type;
         $this->id = $id;
+        $this->count = 1;
     }
 
     public function setPrice ($price, $discount=0)
@@ -58,6 +60,26 @@ abstract class ProductClass implements TypeGetAble, PriceAble
     public function getId()
     {
         return $this->id;
-}
+    }
+
+    public function incCount()
+    {
+        $this->count++;
+    }
+
+    public function decCount()
+    {
+        $this->count--;
+    }
+
+    public function getCount()
+    {
+        return $this->count;
+    }
+
+    public function setCount($count)
+    {
+        $this->count = $count;
+    }
 
 }

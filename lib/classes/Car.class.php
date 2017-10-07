@@ -1,7 +1,7 @@
 <?php
 namespace lib\classes;
 
-class CarClass extends TransportClass
+class Car extends Transport
 {
 
     public function __construct ($brand, $model, $price, $discount, $id, $color)

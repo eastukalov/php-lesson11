@@ -1,8 +1,8 @@
 <?php
 namespace lib\classes;
-use WildGetAble;
+use lib\classes\package\WildGetAble;
 
-class DuckClass extends BirdClass implements WildGetAble
+class Duck extends Bird implements WildGetAble
 {
     private $wild;
 

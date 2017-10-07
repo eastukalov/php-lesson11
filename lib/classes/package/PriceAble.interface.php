@@ -1,4 +1,5 @@
 <?php
+namespace lib\classes\package;
 
 interface  PriceAble
 {
